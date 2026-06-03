@@ -30,12 +30,12 @@
 
 | Cấu trúc Path | Trạng thái thực tế của trợ lý Moni qua kiểm thử |
 | :--- | :--- |
-| **Happy Path** *(Khi AI đúng & tự tin)* | Khi người dùng hỏi trực tiếp về các gói cước di động $
-ightarrow$ Hệ thống lập tức trả về danh sách các gói ưu đãi data cực xịn hiện có, đi kèm nút click để trải nghiệm ngay. |
-| **Low-confidence Path** *(Khi AI không chắc chắn)* | Khi người dùng hỏi những câu hỏi mập mờ hoặc mang tính chất dẫn dắt câu chuyện ("hack" prompt, hỏi sâu về kiến thức nền tảng) $
-ightarrow$ Moni bị mất định vị sản phẩm, thay vì từ chối thì lại thực hiện lệnh **chat viết code HTML** giải thích giao diện. |
-| **Failure Path** *(Khi AI sai / Gặp lỗi hệ thống)* | Khi người dùng liên tục hỏi dồn dập, xoáy sâu vào cơ chế nạp prompt và thu thập dữ liệu $
-ightarrow$ AI bị gãy vai trò (Role-play), tự động **khai báo sử dụng mô hình GPT-4** và trách móc người dùng *"Gài Moni kiểu này là không chơi đẹp rồi đó!"*. |
+| **Happy Path** *(Khi AI đúng & tự tin)* | Khi người dùng hỏi trực tiếp về các gói cước di động 
+ Hệ thống lập tức trả về danh sách các gói ưu đãi data cực xịn hiện có, đi kèm nút click để trải nghiệm ngay. |
+| **Low-confidence Path** *(Khi AI không chắc chắn)* | Khi người dùng hỏi những câu hỏi mập mờ hoặc mang tính chất dẫn dắt câu chuyện ("hack" prompt, hỏi sâu về kiến thức nền tảng) 
+ Moni bị mất định vị sản phẩm, thay vì từ chối thì lại thực hiện lệnh **chat viết code HTML** giải thích giao diện. |
+| **Failure Path** *(Khi AI sai / Gặp lỗi hệ thống)* | Khi người dùng liên tục hỏi dồn dập, xoáy sâu vào cơ chế nạp prompt và thu thập dữ liệu 
+ AI bị gãy vai trò (Role-play), tự động **khai báo sử dụng mô hình GPT-4** và trách móc người dùng *"Gài Moni kiểu này là không chơi đẹp rồi đó!"*. |
 | **Correction Path** *(Cách người dùng sửa sai)* | Hệ thống đã tích hợp sẵn bộ nút **Like / Dislike (Có / Không)** ở dưới mỗi câu trả lời phản hồi để người dùng có thể biểu thị tính đúng đắn và mức độ hữu ích của câu trả lời theo chủ đề. |
 
 ---
