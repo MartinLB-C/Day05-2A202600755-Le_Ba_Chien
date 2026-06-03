@@ -1,72 +1,107 @@
-# Template — Evidence Pack
+# evidence-pack-template.md
 
-Nộp kèm thin SPEC cuối Day 05.
+# Evidence Pack
 
-## 1. Nhóm và track
+## 1. Nhóm và Track
 
-**Tên nhóm:**  
-**Track:**  
-**Product/app đã chọn:**  
-**Build slice đang nghĩ:**  
+**Nhóm:** 09
 
-## 2. Self-use evidence
+**Track:** Travel & Hospitality
 
-Nhóm tự dùng app/workflow và ghi lại điểm gãy.
+**Product/App:** Vinpearl / Sun World
 
-| Observation | Screenshot/link | Path liên quan | Điều học được |
-|---|---|---|---|
-|  |  | Happy / Low-confidence / Failure / Correction |  |
-|  |  | Happy / Low-confidence / Failure / Correction |  |
+**Build Slice:**
 
-## 3. User / review / social evidence
+AI Travel Concierge Bot hỗ trợ xem khách sạn và loại phòng phù hợp.
 
-Nguồn có thể là review App Store/Play, group, comment, phỏng vấn nhanh, hoặc nguồn public khác.
+---
 
-| Quote / review / observation | Nguồn | User là ai? | Pain/failure mode |
-|---|---|---|---|
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+## 2. Self-use Evidence
 
-Nếu chưa có nguồn ngoài nhóm, ghi rõ:
+| Observation                                  | Path           | Điều học được                       |
+| -------------------------------------------- | -------------- | ----------------------------------- |
+| User phải mở nhiều nền tảng để xem khách sạn | Happy          | Thông tin có sẵn nhưng phân tán     |
+| User không biết khách sạn nào phù hợp        | Low-confidence | Cần hỗ trợ decision support         |
+| User không biết phòng nào phù hợp            | Low-confidence | Cần giải thích lựa chọn             |
+| User không biết tiện ích nổi bật             | Failure        | Thiếu thông tin trước khi đặt       |
+| User muốn đổi tiêu chí sau khi xem gợi ý     | Correction     | Bot cần cập nhật lại recommendation |
 
-```text
-Đây là giả định. Nhóm sẽ kiểm bằng [cách] trước checkpoint M1 Day 06.
-```
+---
 
-## 4. Competitor / analog evidence
+## 3. User / Review / Social Evidence
 
-| App / mô hình tham khảo | Họ xử lý task này thế nào? | Pattern học được | Có áp dụng trong 1 ngày không? |
-|---|---|---|---|
-|  |  |  |  |
+### Observation
 
-## 5. Evidence -> Insight
+Người dùng thường:
 
-```text
-Evidence nổi bật nhất:
+* Xem giá trước
+* Đọc review
+* So sánh nhiều khách sạn
+* Không chắc lựa chọn nào phù hợp nhất
 
-Insight:
-User không chỉ gặp [surface problem].
-Thật ra họ cần [deeper need / decision support / trust / recovery].
+### Giả định cần kiểm chứng
 
-Opportunity:
-AI có thể giúp bằng cách [augment/automate hành động hẹp].
-```
+Nhóm sẽ phỏng vấn nhanh 3–5 người từng đi du lịch tự túc.
+
+Câu hỏi:
+
+1. Bạn thường mất bao lâu để chọn khách sạn?
+2. Tiêu chí quan trọng nhất là gì?
+3. Bạn có từng đặt nhầm nơi ở không phù hợp?
+4. Bạn có dùng AI Bot hỗ trợ lựa chọn không?
+
+---
+
+## 4. Competitor / Analog Evidence
+
+| App          | Pattern học được         |
+| ------------ | ------------------------ |
+| Booking      | Filter theo nhu cầu      |
+| Agoda        | So sánh giá và review    |
+| Traveloka    | Gom thông tin du lịch    |
+| AI Concierge | Hội thoại và cá nhân hóa |
+
+---
+
+## 5. Evidence → Insight
+
+### Evidence nổi bật nhất
+
+User không thiếu khách sạn.
+
+User thiếu khả năng ra quyết định.
+
+### Insight
+
+User không chỉ cần danh sách khách sạn.
+
+User cần một trợ lý hội thoại giúp hiểu nhu cầu và hỗ trợ lựa chọn.
+
+### Opportunity
+
+AI có thể:
+
+* Hỏi nhu cầu
+* Hỏi thêm khi thiếu thông tin
+* Gợi ý khách sạn
+* Gợi ý loại phòng
+* Giải thích lý do
+
+---
 
 ## 6. Evidence đổi SPEC như thế nào?
 
-- [ ] Đổi user chính.
-- [ ] Đổi pain statement.
-- [ ] Đổi build slice.
-- [ ] Đổi Auto/Aug decision.
-- [ ] Đổi 4 paths.
-- [ ] Đổi failure mode.
-- [ ] Đổi owner/test plan.
+### Trước
 
-Ghi rõ 1-2 thay đổi quan trọng:
+AI Concierge hỗ trợ toàn bộ chuyến đi.
 
-```text
-Trước evidence, nhóm định...
-Sau evidence, nhóm đổi thành...
-Lý do:
-```
+### Sau
+
+AI Travel Concierge Bot hỗ trợ chọn nơi lưu trú.
+
+### Lý do
+
+* Scope nhỏ hơn
+* Dễ build
+* Dễ demo
+* Có failure path rõ ràng

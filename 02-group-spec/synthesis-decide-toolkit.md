@@ -1,85 +1,120 @@
-# Toolkit — Từ Evidence Đến Build Slice
+# synthesis-decide-toolkit.md
 
-Dùng sau khi nhóm đã có evidence. Mục tiêu là chốt một build slice đủ nhỏ cho Day 06.
+# Synthesis & Decide Toolkit
 
-## 1. Gom evidence thành cụm
+## 1. Gom Evidence Thành Cụm
 
-Gom theo **workflow/pain**, không gom theo tên feature.
+### Cụm Pain
 
-Ví dụ cụm tốt:
+Decision Support trước khi đặt phòng.
 
-- "Không biết chọn chuyên khoa"
-- "Không hiểu vì sao bị tính phí"
-- "Muốn sửa output nhưng không có chỗ sửa"
-- "Bot trả lời tự tin nhưng không dẫn nguồn"
+Biểu hiện:
 
-## 2. Viết insight
+* Không biết chọn khách sạn nào
+* Không biết chọn loại phòng nào
+* Không biết tiện ích có phù hợp không
+* Có quá nhiều lựa chọn
 
-Form:
+---
 
-```text
-User [segment] không chỉ cần [surface need].
-Họ thật ra cần [deeper need],
-vì [evidence pattern].
-```
+## 2. Insight
 
-Ví dụ:
+Khách du lịch tự túc không chỉ cần thông tin khách sạn.
 
-```text
-Người lần đầu đi khám không chỉ cần danh sách chuyên khoa.
-Họ cần hỗ trợ ra quyết định an toàn,
-vì nhiều review/observation cho thấy họ không biết triệu chứng của mình nên đi khoa nào.
-```
+Họ cần một trợ lý hội thoại có thể:
 
-## 3. Viết opportunity
+* Hiểu nhu cầu
+* Đặt câu hỏi phù hợp
+* Giải thích các lựa chọn
+* Hỗ trợ ra quyết định
 
-Form:
+---
 
-```text
-Cơ hội là dùng AI để [augment/automate hành động hẹp],
-giúp user [kết quả],
-trong khi vẫn kiểm soát [failure/risk].
-```
+## 3. Opportunity
 
-## 4. Chọn build slice
+Dùng AI Travel Concierge Bot để:
 
-Build slice tốt phải qua 5 câu hỏi:
+* Thu thập nhu cầu
+* Hỏi lại khi thiếu thông tin
+* Gợi ý khách sạn phù hợp
+* Gợi ý loại phòng phù hợp
+* Hiển thị tiện ích nổi bật
 
-| Câu hỏi | Đạt khi |
-|---|---|
-| User cụ thể chưa? | Nói được ai dùng, trong bối cảnh nào. |
-| Task đủ hẹp chưa? | Demo được trong 3-5 phút. |
-| AI decision rõ chưa? | AI gợi ý/tự làm một việc cụ thể. |
-| Failure path rõ chưa? | Có một case AI không chắc hoặc sai để test. |
-| Có evidence không? | Có bằng chứng từ self-use/review/user/competitor. |
+---
 
-## 5. Quyết định: giữ, giảm scope, hay đổi hướng?
+## 4. Chọn Build Slice
 
-| Tình huống | Quyết định |
-|---|---|
-| Evidence yếu, user mơ hồ | Dừng build sâu; quay lại research 20 phút. |
-| Ý tưởng quá rộng | Giữ domain, cắt xuống một flow. |
-| AI không cần thiết | Dùng rule/manual prototype; ghi rõ vì sao không dùng AI sâu. |
-| Rủi ro cao | Chọn augmentation hoặc conditional automation. |
-| Không demo được trong 1 ngày | Đưa phần lớn vào backlog, giữ một path nhỏ. |
+### User
 
-## 6. Câu chốt cuối
+Khách du lịch tự túc.
 
-Điền câu này trước khi rời lớp:
+### Task
 
-```text
-Dựa trên [evidence],
-nhóm sẽ build [prototype slice],
-cho [user],
-để giải quyết [pain],
-bằng cách AI [augment/automate task],
-và sẽ test failure path [failure mode].
-```
+Tìm hiểu nơi lưu trú trước khi đặt phòng.
+
+### AI Bot
+
+AI Travel Concierge Bot.
+
+### AI Decision
+
+Khách sạn và loại phòng nào phù hợp nhất với nhu cầu hiện tại.
+
+### Failure Path
+
+User cung cấp thiếu thông tin nhưng bot vẫn cố gợi ý.
+
+---
+
+## 5. Quyết định
+
+### Evidence đủ mạnh?
+
+Có.
+
+### Scope có quá lớn không?
+
+Không.
+
+### Demo được trong 1 ngày không?
+
+Có.
+
+### Quyết định cuối
+
+Build:
+
+> AI Travel Concierge Bot
+
+---
+
+## 6. Câu Chốt Cuối
+
+Dựa trên evidence,
+
+nhóm sẽ build một prototype AI Travel Concierge Bot,
+
+cho khách du lịch tự túc lần đầu đến địa điểm mới,
+
+để giải quyết pain trong việc tìm hiểu nơi lưu trú,
+
+bằng cách AI augment quá trình ra quyết định,
+
+và sẽ test failure path:
+
+> User cung cấp thiếu thông tin nhưng bot vẫn cố gợi ý khách sạn.
+
+---
 
 ## 7. Backlog
 
-Những thứ **không build trong Day 06**:
+Không build trong Day 06:
 
-- 
-- 
-- 
+* Đặt phòng
+* Thanh toán
+* Đổi / hủy phòng
+* Lịch trình toàn chuyến đi
+* Vé vui chơi
+* Multi-agent concierge
+* Giá realtime
+* Tích hợp bản đồ
